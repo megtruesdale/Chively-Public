@@ -1,192 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chively Landing Page Images</title>
-    <style>
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #374151;
-            margin: 0;
-            padding: 2rem;
-            background: #f8fafc;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h1 {
-            color: #2a8a6b;
-            margin-bottom: 2rem;
-        }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        .image-item {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .image-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-        }
-        .image-info {
-            margin-top: 1rem;
-        }
-        .image-name {
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 0.5rem;
-        }
-        .image-url {
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-            background: #f1f5f9;
-            padding: 0.5rem;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            word-break: break-all;
-            color: #475569;
-        }
-        .copy-btn {
-            background: #2a8a6b;
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-            transition: background 0.3s ease;
-        }
-        .copy-btn:hover {
-            background: #21785d;
-        }
-        .instructions {
-            background: #e6f3ee;
-            border: 1px solid #2a8a6b;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .instructions h2 {
-            color: #2a8a6b;
-            margin-top: 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chively — Eat easy.</title>
+  <meta name="description" content="Personalized meal plans that fit your diet, budget, and goals — powered by real‑time grocery data and personalized meal plans.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Chively Landing Page Images</h1>
+  <header class="site-header" role="banner">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="Chively home">
         
-        <div class="instructions">
-            <h2>How to Use These Images</h2>
-            <p>These images are hosted publicly and can be used in your Carrd projects. Simply copy the image URL and paste it into your Carrd image elements or HTML.</p>
-            <p><strong>Base URL:</strong> <code>https://your-username.github.io/chively-images-public/images/</code></p>
-            <p><strong>Note:</strong> Replace <code>your-username</code> with your actual GitHub username when using these URLs.</p>
-        </div>
-
-        <div class="image-grid">
-            <!-- Hero Image -->
-            <div class="image-item">
-                <img src="images/woman2.png" alt="Chively App Hero Image">
-                <div class="image-info">
-                    <div class="image-name">Hero Image (woman2.png)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/woman2.png</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/woman2.png')">Copy URL</button>
-                </div>
-            </div>
-
-            <!-- Main Screenshots -->
-            <div class="image-item">
-                <img src="images/4screenshots-updated.png" alt="Chively App Screenshots">
-                <div class="image-info">
-                    <div class="image-name">Main Screenshots (4screenshots-updated.png)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/4screenshots-updated.png</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/4screenshots-updated.png')">Copy URL</button>
-                </div>
-            </div>
-
-            <!-- Individual Screenshots -->
-            <div class="image-item">
-                <img src="images/1Goals.png" alt="Chively App - Goals Screen">
-                <div class="image-info">
-                    <div class="image-name">Goals Screen (1Goals.png)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/1Goals.png</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/1Goals.png')">Copy URL</button>
-                </div>
-            </div>
-
-            <div class="image-item">
-                <img src="images/2Tastes.png" alt="Chively App - Preferences Screen">
-                <div class="image-info">
-                    <div class="image-name">Preferences Screen (2Tastes.png)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/2Tastes.png</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/2Tastes.png')">Copy URL</button>
-                </div>
-            </div>
-
-            <div class="image-item">
-                <img src="images/3Weekly-menu.png" alt="Chively App - Weekly Menu Screen">
-                <div class="image-info">
-                    <div class="image-name">Weekly Menu Screen (3Weekly-menu.png)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/3Weekly-menu.png</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/3Weekly-menu.png')">Copy URL</button>
-                </div>
-            </div>
-
-            <div class="image-item">
-                <img src="images/4Checkout.png" alt="Chively App - Checkout Screen">
-                <div class="image-info">
-                    <div class="image-name">Checkout Screen (4Checkout.png)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/4Checkout.png</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/4Checkout.png')">Copy URL</button>
-                </div>
-            </div>
-
-            <!-- Signup Background (Optional) -->
-            <div class="image-item">
-                <img src="images/signup-lifestyle.jpg" alt="Chively App - Signup Background">
-                <div class="image-info">
-                    <div class="image-name">Signup Background (signup-lifestyle.jpg)</div>
-                    <div class="image-url">https://your-username.github.io/chively-images-public/images/signup-lifestyle.jpg</div>
-                    <button class="copy-btn" onclick="copyToClipboard('https://your-username.github.io/chively-images-public/images/signup-lifestyle.jpg')">Copy URL</button>
-                </div>
-            </div>
-        </div>
+        <h1>Chively</h1>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"><i class="fas fa-bars"></i></button>
+      <nav id="primary-nav" class="primary-nav" role="navigation">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
+        <!-- <a href="#pricing">Pricing</a> -->
+        <a href="#signup" class="btn btn--primary btn--lg">Sign up</a>
+      </nav>
     </div>
+  </header>
 
-    <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                // Change button text temporarily
-                event.target.textContent = 'Copied!';
-                setTimeout(function() {
-                    event.target.textContent = 'Copy URL';
-                }, 2000);
-            }).catch(function(err) {
-                console.error('Could not copy text: ', err);
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = text;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                event.target.textContent = 'Copied!';
-                setTimeout(function() {
-                    event.target.textContent = 'Copy URL';
-                }, 2000);
-            });
-        }
-    </script>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      
+      <div class="container hero__wrap">
+        <div class="hero__copy">
+          <h1>Smarter Meals, Made Simple</h1>
+          <h2>The Chively Way.</h2>
+          <p>Get weekly meal plans tailored to your dietary preferences, budget, and goals — with automated grocery list generation and one‑click shopping for pickup or delivery.</p>
+          <div class="hero__cta">
+            <a href="#signup" class="btn btn--primary btn--lg">Get Early Access</a>
+            <a href="#how-it-works" class="btn btn--ghost btn--lg">See How It Works</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong id="waitlist-count" data-target="2500">2,500+</strong> on the waitlist</li>
+            <li><strong>2026</strong> launch</li>
+            <li><strong>50% off</strong> preorder</li>
+          </ul>
+        </div>
+        <div class="hero__visual" aria-hidden="true">
+          <div class="phone">
+            <img src="https://megtruesdale.github.io/Chively-Public/images/woman2.png" alt="Chively app screenshot">
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section-->
+    <section class="features" id="features">
+      <div class="container">
+          <div class="section-header">
+              <h2>Why Choose Chively?</h2>
+              <p>The easiest way to save money, plan smarter, and eat better</p>
+          </div>
+          <div class="features-grid">
+              <div class="feature-card">
+                  <div class="feature-icon">
+                      <i class="fas fa-utensils"></i>
+                  </div>
+                  <div class="feature-content">
+                      <h3>Meal Plans That Fit You</h3>
+                      <p>Get personalized meal plans tailored to your dietary preferences, restrictions, and lifestyle.</p>
+                  </div>
+              </div>
+              <div class="feature-card">
+                  <div class="feature-icon">
+                      <i class="fas fa-dollar-sign"></i>
+                  </div>
+                  <div class="feature-content">
+                      <h3>Budget-Friendly Planning</h3>
+                      <p>Set your budget and get a custom plan that works within your financial constraints with real-time pricing.</p>
+                  </div>
+              </div>
+              <div class="feature-card">
+                  <div class="feature-icon">
+                      <i class="fas fa-bullseye"></i>
+                  </div>
+                  <div class="feature-content">
+                      <h3>Goal-Oriented Eating</h3>
+                      <p>Lose weight, gain muscle, or eat healthier, no matter your goal, we'll create a plan that supports you.</p>
+                  </div>
+              </div>
+              <div class="feature-card">
+                  <div class="feature-icon">
+                      <i class="fas fa-shopping-cart"></i>
+                  </div>
+                  <div class="feature-content">
+                      <h3>Shop Smarter</h3>
+                      <p>One-click ordering with real-time grocery prices.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> 
+
+    <!-- FEATURES 
+    <section id="features" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Why Choose Chively?</h2>
+        <p class="section__sub">The easiest way to eat better, save money, and plan smarter.</p>
+        <div class="grid features">
+          <article class="card feature">
+            <div class="icon" aria-hidden="true"><i class="fas fa-utensils"></i></div>
+            <h3>Meal Plans That Fit You</h3>
+            <p>From keto to vegan to gluten‑free, get weekly plans that match your lifestyle.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon" aria-hidden="true"><i class="fas fa-dollar-sign"></i></div>
+            <h3>Budget‑Friendly Planning</h3>
+            <p>Stay on budget with plans that adapt to real‑time grocery prices.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
+            <h3>Goal‑Oriented Eating</h3>
+            <p>Lose weight, build muscle, or eat cleaner — your plan aligns to your goals.</p>
+          </article>
+          <article class="card feature">
+            <div class="icon" aria-hidden="true"><i class="fas fa-shopping-cart"></i></div>
+            <h3>Shop Smarter</h3>
+            <p>Add ingredients to cart for one click for delivery or pickup.</p>
+          </article>
+        </div>
+      </div>
+    </section>-->
+
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section" id="how-it-works">
+      <div class="container">
+          <div class="section-header">
+              <h2>How It Works</h2>
+              <p>Get your personalized meal plan in three simple steps</p>
+          </div>
+          <div class="steps-container">
+              <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                      <h3>Customize</h3>
+                      <p>Set your preferences, goals, and budget to create your perfect profile.</p>
+                  </div>
+              </div>
+              <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                      <h3>Plan</h3>
+                      <p>Get a tailored meal plan instantly with recipes that fit your lifestyle.</p>
+                  </div>
+              </div>
+              <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                      <h3>Shop</h3>
+                      <p>One-click to order groceries for pickup or delivery.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- HOW IT WORKS 
+    <section id="how" class="section">
+      <div class="container">
+        <h2 class="section__title">How it works</h2>
+        <div class="how grid">
+          <div class="how__step card">
+            <div class="how__icon">✅</div>
+            <h3>Customize</h3>
+            <p>Set dietary preferences, goals, and budget.</p>
+            <img class="how__img" src="Images/screenshot2.png" alt="Preferences screen">
+          </div>
+          <div class="how__step card">
+            <div class="how__icon">📅</div>
+            <h3>Plan</h3>
+            <p>Chively creates a weekly meal plan instantly.</p>
+            <img class="how__img" src="Images/screenshot3.png" alt="Meal plan screen">
+          </div>
+          <div class="how__step card">
+            <div class="how__icon">🛍️</div>
+            <h3>Shop</h3>
+            <p>Send your list to Instacart with live prices.</p>
+            <img class="how__img" src="Images/screenshot4.png" alt="Grocery list screen">
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <!-- GALLERY / APP PREVIEW -->
+    <section class="section section--alt">
+      <div class="container">
+        <!-- GALLERY / APP PREVIEW
+        <h2 class="section__title">See Chively in action</h2> -->
+        <div class="screenshots-showcase">
+          <img src="https://megtruesdale.github.io/Chively-Public/images/4screenshots-updated.png" alt="Chively app screenshots" class="screenshots-image">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <!-- <section id="pricing" class="section">
+      <div class="container pricing">
+        <h2 class="section__title">Preorder Special</h2>
+        <p class="section__sub">Lock in early‑access pricing today.</p>
+        <div class="card price-card">
+          <div class="badge">50% OFF</div>
+          <h3>Chively Pro</h3>
+          <p class="price"><span class="old">$9.99</span> <span class="new">$4.99</span><span class="per">/month</span></p>
+          <ul class="list">
+            <li>Personalized weekly meal plans</li>
+            <li>Real‑time Instacart pricing</li>
+            <li>Budget tracking & savings insights</li>
+            <li>Goal‑based nutrition recommendations</li>
+            <li>Early access to new features</li>
+          </ul>
+          <a href="#signup" class="btn btn--primary btn--lg">Preorder Now</a>
+          <p class="muted">Cancel anytime. No commitment required.</p>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- SIGNUP -->
+    <section id="signup" class="section signup">
+      <div class="signup__bg" aria-hidden="true">
+        <img src="https://megtruesdale.github.io/Chively-Public/images/signup-lifestyle.jpg" alt="" />
+      </div>
+      <div class="container">
+        <div class="card signup__card">
+          <h2>Ready to eat easier?</h2>
+          <p>Join the waitlist to get early access and exclusive preorder discounts.</p>
+          <form id="waitlist-form" class="form" aria-label="Join the Chively waitlist" method="POST" action="https://script.google.com/macros/s/AKfycbw3kE1hKFsR-tGeshvGQu4ZJPlWZJ9frk4sUsVMG50oN4hiUic-8s9oyTmutExrlt-3/exec">
+            <label for="email" class="sr-only">Email</label>
+            <input id="email" name="Email" type="email" placeholder="Enter your email" required />
+            <button type="submit" class="btn btn--primary">Join the Waitlist</button>
+          </form>
+          <p class="benefits">50% off first year · Early access · Development updates</p>
+          <div id="form-success" class="toast" role="status" aria-live="polite" aria-atomic="true" style="display: none;">✅ You're in! Stay tuned for early access and updates.</div>
+          <div id="form-error" class="toast" role="status" aria-live="polite" aria-atomic="true" style="display: none; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626;">❌ Something went wrong. Please try again.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+        <!-- Footer -->
+        <footer class="footer">
+          <div class="container">
+              <div class="footer-content">
+                  <div class="footer-brand">
+                      <h3>Chively</h3>
+                      <p>Eat Easy with Chively</p>
+                  </div><!--
+                  <div class="footer-links">
+                      <a href="#features">Features</a>
+                      <a href="#how-it-works">How It Works</a>
+                      <a href="#screenshots">Screenshots</a>
+                       <a href="#pricing">Pricing</a> 
+                      <a href="#pricing">Pricing</a>
+                      <a href="mailto:hello@chively.app">Contact</a>
+                  <div class="footer-social">
+                      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                  </div>-->
+                  
+              </div>
+              <div class="footer-bottom">
+                  <p>&copy; 2025 Chively. All rights reserved.</p>
+              </div>
+          </div>
+      </footer>
+    
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
