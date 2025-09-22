@@ -45,6 +45,19 @@ if (form) {
     if (successToast) successToast.style.display = 'none';
     if (errorToast) errorToast.style.display = 'none';
     
+    // Validate reCAPTCHA
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      if (errorToast) {
+        errorToast.textContent = '❌ Please complete the reCAPTCHA verification.';
+        errorToast.style.display = 'block';
+        setTimeout(() => {
+          errorToast.style.display = 'none';
+        }, 5000);
+      }
+      return;
+    }
+    
     // Get form data
     const formData = new FormData(form);
     
@@ -70,8 +83,9 @@ if (form) {
         }, 5000);
       }
       
-      // Reset form
+      // Reset form and reCAPTCHA
       form.reset();
+      grecaptcha.reset();
     })
     .catch((error) => {
       console.error('Error:', error);
