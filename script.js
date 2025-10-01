@@ -37,6 +37,9 @@ const form = document.getElementById('waitlist-form');
 const successToast = document.getElementById('form-success');
 const errorToast = document.getElementById('form-error');
 
+// reCAPTCHA configuration
+const RECAPTCHA_SITE_KEY = '6LfoddorAAAAAFbdQZJmtx1tyvy2AOZij4AaE5Du';
+
 if (form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -46,10 +49,21 @@ if (form) {
     if (errorToast) errorToast.style.display = 'none';
     
     // Validate reCAPTCHA
+    if (typeof grecaptcha === 'undefined') {
+      if (errorToast) {
+        errorToast.textContent = 'reCAPTCHA failed to load. Please refresh the page and try again.';
+        errorToast.style.display = 'block';
+        setTimeout(() => {
+          errorToast.style.display = 'none';
+        }, 5000);
+      }
+      return;
+    }
+    
     const recaptchaResponse = grecaptcha.getResponse();
     if (!recaptchaResponse) {
       if (errorToast) {
-        errorToast.textContent = '❌ Please complete the reCAPTCHA verification.';
+        errorToast.textContent = 'Please complete the reCAPTCHA verification.';
         errorToast.style.display = 'block';
         setTimeout(() => {
           errorToast.style.display = 'none';
@@ -60,6 +74,9 @@ if (form) {
     
     // Get form data
     const formData = new FormData(form);
+    
+    // Add reCAPTCHA response to form data
+    formData.append('g-recaptcha-response', recaptchaResponse);
     
     // Show loading state
     const submitButton = form.querySelector('button[type="submit"]');
