@@ -1,0 +1,72 @@
+{
+  "name": "Chively — Eat easy.",
+  "short_name": "Chively",
+  "description": "Personalized meal plans that fit your diet, budget, and goals — powered by real‑time grocery data and personalized meal plans.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6366f1",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "assets/Favicon/favicon-gradient-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-48x48.png",
+      "sizes": "48x48",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-180x180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "assets/Favicon/favicon-gradient-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["food", "lifestyle", "productivity", "health"],
+  "screenshots": [
+    {
+      "src": "https://megtruesdale.github.io/Chively-Public/images/4screenshots-updated.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Chively app screenshots showing meal planning features"
+    }
+  ]
+}
